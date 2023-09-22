@@ -34,7 +34,24 @@ namespace Gyakorlat_02
             //Ha a bankszámla egyenlege nagyobb vagy egyenlő 100 000 egységgel, és a havi jövedelem legalább 5000 egység, akkor a program ajánlja a befektetés lehetőségét.
             //Ha a bankszámla egyenlege kevesebb mint 100 000 egység, de a havi jövedelem legalább 3000 egység, akkor a program ajánlja a megtakarítási lehetőséget.
             //Ha egyik feltétel sem teljesül, a program azt javasolja, hogy a felhasználó folytassa a jelenlegi pénzügyi helyzetének felülvizsgálatát és tervezését.
-
+             
+            Console.WriteLine("Mekkora összeg van a számládon?");
+            int osszeg = int.Parse(Console.ReadLine());
+            Console.WriteLine("Mennyi a havi jövedelmed?");
+            int jov = int.Parse(Console.ReadLine());
+            
+            if (osszeg >= 100000 && jov >= 5000)
+            {
+             Console.WriteLine("fektess be");
+            }
+            else if ((osszeg < 100000 && jov >= 3000) || (osszeg >= 100000 && jov < 3000))
+            {
+             Console.WriteLine("takaríts meg");
+            }
+            else
+            {
+             Console.WriteLine("csóró vagy");
+            }
             Console.WriteLine("\n");
 
             #endregion
